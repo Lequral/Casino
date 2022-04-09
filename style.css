@@ -1,0 +1,38 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    overflow: clip;
+}
+
+main {
+    background-color: #51B3F4;  
+    width: 5000px;
+    height: 5000px;
+    z-index: -1;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#player {
+    position: absolute;
+    top: calc(50vh - 63px);
+    left: calc(50vw - 18px);
+
+    /*Taille des plus grandes images*/
+    width: 36px;
+    height: 126px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    z-index: 1;
+}
+
+#player img{
+    position: absolute;
+}
