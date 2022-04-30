@@ -1,38 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@400;600&display=swap');
+
+
 body {
-    height: 100vh;
     margin: 0;
     padding: 0;
-
-    overflow: clip;
+    font-family: Akshar;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 main {
-    background-color: #51B3F4;  
-    width: 5000px;
-    height: 5000px;
-    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    
+    display: flex;
+    justify-content: center;
+}
+
+#machine {
+    width: 60vw;
+    max-width: 100vh;
+    display: flex;
+    flex-direction: column;
+    perspective: 350px;
+}
 
 
+#topPannel {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 25vh;
+
+    background-color: #e7a454;
+}
+
+.troisD {
+    transform-style: preserve-3d;
+}
+
+#angle1 {
+    width: 100%;
+    height: 10vh;
+    translate: 0 0 -3.5vh;
+    transform: rotateX(-15deg);
+    
+    background-color: #e75454;
+}
+
+#angle2 {
+    width: 100%;
+    height: 5vh;
+    transform: rotateX(25deg);
+    translate: 0 0 -3.5vh;
+    
+    background-color: #e75454;
+}
+
+p#argent {
+    align-self: start;
+    width: max-content;
+    max-width: inherit;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 600;
+    width: 100%;
+    margin: 0;
+    font-size: 85px;
+    text-align: center;
+}
+
+#slotPannel {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    translate: 0 0 -5vh;
+    
+    background-color: #eaff7f;
+}
+
+#bottomMachine {
+    width: 100%;
+    height: 5vh;
+    
+    background-color: #e7a454;
+}
+
+#slots {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin: 5% 0;
+}
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: spin 2s ease-in-out;
+    /* animation: spin 1s infinite reverse linear; */
+    /* animation-play-state: paused; */ 
+}
+
+@keyframes spin{
+    0% { 
+        transform: rotateX(0deg);
+    }
+
+    25% { 
+        transform: rotateX(90deg); 
+    }
+
+    50% { 
+        transform: rotateX(180deg); 
+    }
+
+    75% { 
+        transform: rotateX(270deg); 
+    }
+
+    100% { 
+        transform: rotateX(360deg); 
+    }
+}
+
+.face {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    border: 5px solid black;
+    box-sizing: border-box;
 }
 
-#player {
-    position: absolute;
-    top: calc(50vh - 63px);
-    left: calc(50vw - 18px);
-
-    /*Taille des plus grandes images*/
-    width: 36px;
-    height: 126px;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-
-    z-index: 1;
+#front {
+    transform: translateZ(50px);
 }
 
-#player img{
-    position: absolute;
+#bottom {
+    top: 50px;
+    rotate: x -90deg;
+}
+
+#back {
+    transform: translateZ(-50px);
+    scale: 1 -1;
+}
+
+#top {
+    bottom: 50px;
+    rotate: x 90deg
+}
+
+#tourner {
+    width: max-content;
+    font-family: Akshar;
+    font-size: 20px;
+    padding: 10px 15px;
 }
