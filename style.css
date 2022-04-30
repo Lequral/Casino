@@ -134,6 +134,46 @@ h1 {
     }
 }
 
+@keyframes spinToface0{
+    0% { 
+        transform: rotateX(0deg);
+    }
+
+    100% { 
+        transform: rotateX(360deg); 
+    }
+}
+
+@keyframes spinToface1{
+    0% { 
+        transform: rotateX(0deg);
+    }
+    
+    100% { 
+        transform: rotateX(450deg); 
+    }
+}
+
+@keyframes spinToface2{
+    0% { 
+        transform: rotateX(0deg);
+    }
+    
+    100% { 
+        transform: rotateX(540deg); 
+    }
+}
+
+@keyframes spinToface3{
+    0% { 
+        transform: rotateX(0deg);
+    }
+    
+    100% { 
+        transform: rotateX(6300deg); 
+    }
+}
+
 .face {
     display: flex;
     justify-content: center;
