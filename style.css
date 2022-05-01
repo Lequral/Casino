@@ -95,15 +95,16 @@ h1 {
 
 #slotPannel {
     position: absolute;
-    width: 100%;
+    width: 97%;
     height: 103%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transform-style: preserve-3d;
-    translate: 0 0 -14px;
     z-index: -3;
+    margin: 0 1.5%;
+    padding: 0 5%;
+    box-sizing: border-box;
 
     background-color: #eaff7f;
 }
@@ -124,8 +125,8 @@ h1 {
 
 
 .box {
-    width: 100px;
-    height: 100px;
+    height: 200px;
+    width: 200px;
     transform-style: preserve-3d;
     animation: spin 2s reverse ease-in-out;
     /* animation: spin 1s infinite linear; */
@@ -212,29 +213,29 @@ h1 {
     align-items: center;
     position: absolute;
 
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     background-color: grey;
     border: 5px solid black;
     box-sizing: border-box;
 }
 
 #front {
-    transform: translateZ(50px);
+    transform: translateZ(100px);
 }
 
 #bottom {
-    top: 50px;
+    top: 100px;
     rotate: x -90deg;
 }
 
 #back {
-    transform: translateZ(-50px);
+    transform: translateZ(-100px);
     scale: 1 -1;
 }
 
 #top {
-    bottom: 50px;
+    bottom: 100px;
     rotate: x 90deg
 }
 
@@ -243,4 +244,5 @@ h1 {
     font-family: Akshar;
     font-size: 20px;
     padding: 10px 15px;
+    margin-top: 5%;
 }
